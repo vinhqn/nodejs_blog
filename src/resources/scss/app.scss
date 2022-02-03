@@ -1,0 +1,14 @@
+@import "../scss/variable";
+
+h1 {
+  color: $red-color;
+}
+h2 {
+  color: yellow;
+}
+
+.checkbox-select-all-options {
+  width: 160px;
+  margin-right: 16px;
+  margin-left: 16px;
+}

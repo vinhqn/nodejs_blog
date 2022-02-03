@@ -1,0 +1,39 @@
+{
+  "name": "vinh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "node-sass --watch src/resources/scss/app.scss src/public/css/app.css",
+    "scss": "node-sass --watch src/public"
+  },
+  "repository": "git+https://github.com/vinhqn/nodejs_blog.git",
+  "keywords": [
+    "vinh",
+    "blog",
+    "vinh",
+    "nodejs"
+  ],
+  "author": "vinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vinhqn/nodejs_blog/issues"
+  },
+  "homepage": "https://github.com/vinhqn/nodejs_blog#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.8.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^6.1.9",
+    "mongoose-delete": "^0.5.4",
+    "mongoose-slug-generator": "^1.0.4"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15",
+    "prettier": "2.5.1"
+  }
+}
