@@ -8,7 +8,7 @@ const port = 3000;
 const route = require("./src/routers");
 const db = require("./src/config/db");
 const SortMiddleWare = require("./src/app/middlewares/SortMiddleWare");
-
+const helpersHandlebars = require("./src/helpers/handlebars");
 // Connect to DB
 db.connect();
 
@@ -16,31 +16,7 @@ const hbs = require("express-handlebars").create({
   defaultLayout: "main",
   extname: ".hbs",
   partialsDir: [path.join(__dirname, "src/resources/views/partials/")],
-  helpers: {
-    sum: (a, b) => a + b,
-    sortable: (field, sort) => {
-      const sortType = field === sort.column ? sort.type : "default";
-      const icons = {
-        default: "bi bi-funnel",
-        asc: "bi bi-sort-up",
-        desc: "bi bi-sort-down",
-      };
-      const types = {
-        default: "desc",
-        asc: "desc",
-        desc: "asc",
-      };
-
-      const icon = icons[sortType];
-      const type = types[sortType];
-      // <i class="bi bi-sort-down"></i>
-      return `<a href="?_sort&column=${field}&type=${type}">
-            <i class="${icon}"></i>
-           
-            
-          </a>`;
-    },
-  },
+  helpers: helpersHandlebars,
 });
 app.use(express.static(path.join(__dirname, "src/public")));
 
